@@ -1,0 +1,7 @@
+<div *ngIf="peopleResponse | async as pr">
+  
+  <p *ngFor="let person of pr.results">
+    {{ person.name }}
+  </p>
+
+</div>  
