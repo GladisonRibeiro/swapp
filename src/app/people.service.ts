@@ -18,9 +18,11 @@ export class PeopleService {
 
   }
 
-  getPeople(): Observable<any> {
+  getPeople(url?:string): Observable<any> {
+
+    const uri = url ? url : `${this.url}people`;
     return this.http
-      .get<PeopleResponse>(`${this.url}people`);
+      .get<PeopleResponse>(uri);
   }
 
 }

@@ -1,7 +1,9 @@
-<div *ngIf="peopleResponse | async as pr">
+<div class="wrapper" *ngIf="peopleResponse | async as pr">
   
-  <p *ngFor="let person of pr.results">
+  <p *ngFor="let person of pr.results" (click)="onSelectPerson(person)">
     {{ person.name }}
   </p>
+
+  <button (click)="onNextPage(pr.next)">next</button>
 
 </div>  

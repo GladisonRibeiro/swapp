@@ -1,9 +1,11 @@
-<header>
-  <h1>SWAPP</h1>
-</header>
-<main>
-  <app-people-list></app-people-list>
-</main>
-<aside>
-  Lateral
-</aside>
+<div class="wrapper">
+  <header>
+    <h1>SWAPP</h1>
+  </header>
+  <main>
+    <app-people-list [people]="lista" (selectPerson)="onSelectPerson($event)"></app-people-list>
+  </main>
+  <aside>
+    <app-people-detail [person]="personSelected"></app-people-detail>
+  </aside>
+</div>
